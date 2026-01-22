@@ -2,7 +2,7 @@ package com.mrtomate.ecommerce.dto;
 
 import java.math.BigDecimal;
 
-class ProdutoDTO {
+public class ProdutoDTO {
 
     private Long id;
     private String nome;
