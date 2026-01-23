@@ -25,6 +25,8 @@ public class Usuario {
     @Column(nullable = false)
     private String senha;
 
+    private String endereco;
+
     public Usuario() {}
 
     public Usuario(String nome, String email, String senha) {
@@ -63,5 +65,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 }
