@@ -4,7 +4,6 @@ import com.mrtomate.ecommerce.dto.ProdutoDTO;
 import com.mrtomate.ecommerce.exception.ProdutoNaoEncontradoException;
 import com.mrtomate.ecommerce.models.Produto;
 import com.mrtomate.ecommerce.repository.ProdutoRepository;
-import jakarta.validation.Path.ReturnValueNode;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class ProdutoService {
     @Autowired
     private ProdutoRepository repository;
 
-    public ProdutoDTO criar(Produto dto) {
+    public ProdutoDTO criar(ProdutoDTO dto) {
         Produto produto = new Produto(
             dto.getNome(),
             dto.getDescricao(),
