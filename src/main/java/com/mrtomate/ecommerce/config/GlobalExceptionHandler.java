@@ -2,6 +2,7 @@ package com.mrtomate.ecommerce.config;
 
 import com.mrtomate.ecommerce.exception.EmailJaRegistradoException;
 import com.mrtomate.ecommerce.exception.EstoqueInsuficienteException;
+import com.mrtomate.ecommerce.exception.PedidoNaoEncontradoException;
 import com.mrtomate.ecommerce.exception.ProdutoNaoEncontradoException;
 import com.mrtomate.ecommerce.exception.UsuarioNaoEncontradoException;
 import java.util.HashMap;
@@ -68,5 +69,14 @@ public class GlobalExceptionHandler {
         erro.put("erro", "Validação falhou");
         erro.put("detalhes", campos);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(erro);
+    }
+
+    @ExceptionHandler(PedidoNaoEncontradoException.class)
+    public ResponseEntity<Map<String, String>> handlePedidoNaoEncontrado(
+        PedidoNaoEncontradoException e
+    ) {
+        Map<String, String> erro = new HashMap<>();
+        erro.put("erro", e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(erro);
     }
 }
