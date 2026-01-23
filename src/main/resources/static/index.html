@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>E-commerce API</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bem-vindo à API E-commerce</h1>
+        <p>Versão 1.0</p>
+
+        <h2>Endpoints Disponíveis:</h2>
+        <ul>
+            <li>
+                <strong>Produtos:</strong>
+                <ul>
+                    <li>GET /produtos</li>
+                    <li>POST /produtos</li>
+                    <li>GET /produtos/{id}</li>
+                    <li>PUT /produtos/{id}</li>
+                    <li>DELETE /produtos/{id}</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Usuários:</strong>
+                <ul>
+                    <li>POST /usuarios</li>
+                    <li>GET /usuarios/{id}</li>
+                    <li>PUT /usuarios/{id}</li>
+                    <li>DELETE /usuarios/{id}</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Pedidos:</strong>
+                <ul>
+                    <li>POST /pedidos</li>
+                    <li>GET /pedidos/{id}</li>
+                    <li>GET /pedidos/usuario/{usuarioId}</li>
+                    <li>PATCH /pedidos/{id}/status</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
